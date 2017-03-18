@@ -37,7 +37,7 @@ as variables into the addArticle() function on the button! Example:
 ```
 4. In javascript, by default, propagates the click event to all the parent components. Because the click event is propagated to parents, our browser is trying to follow the empty link, which tells the browser to reload.
 
-##内嵌指令 
+## 内嵌指令 
 1. ngIf
 ```html
 <div *ngIf="false"></div> <!-- never display -->
@@ -73,7 +73,7 @@ as variables into the addArticle() function on the button! Example:
 </span>
 ```
 
-##Form in Anuglar 2
+## Form in Anuglar 2
 1. FormControl 和 FormGroup。
 	* A FormControl reporsents a single input field - it is the smallest unit of an Angular form.
 	* FormGroup: consists of multiple FormControls
@@ -177,7 +177,7 @@ class abc {
 }
 ```
 
-##HTTP
+## HTTP
 1. 在js中，异步的实现方法有三个：
 	* Callbacks
 	* Promises( .then() )
@@ -197,7 +197,7 @@ let j = a || b; // a、b均不为空时，选a，即前者；有任意一个为�
 ```
 5. 
 
-##RxJS
+## RxJS
 1. 对事件进行监听：将事件转变成一个可观察流(observable stream)，例如：
 ```typescript
 // convert the 'keyup' event into an observable stream
@@ -205,7 +205,7 @@ Observable.fromEvent(this.el.nativeElement, 'keyup')
 ```
 2. subscribe()**依次**接受三个回调：onSuccess、onError、onCompletion，其中后两个可选
 
-##Routing
+## Routing
 1. Routes、RouterModule：不同页面之间的跳转
 ```typescript
 import {
@@ -316,7 +316,7 @@ import { routes_products } from './ts/components/products/products.router';
 { path: 'products', component: ProductsComponent, children: routes_products }  // 嵌套路由
 ```
 
-##Dependency Injection 依赖注入（代码dependency_injectory/complex）
+## Dependency Injection 依赖注入（代码dependency_injectory/complex）
 1. 定义：当组件/服务A需要组件/服务B运行时，就说B是A的一个依赖
 2. 依赖注入由三个部分组成：
 	* Provider：{provide: ... , useClass/useValue: ...}，用于将token和依赖绑定在一起，其中provide就是token，useClass/useValue就是依赖
@@ -411,7 +411,7 @@ constructor(private apiService: ApiService,
 }
 ```
 
-##NgModule
+## NgModule
 1. 一种在Angular框架中管理依赖的方式：**what tags are compiled** and **what dependencies should be injected**
 2. 目的：
 	* 可让其在“module”层次上避免自定义的tag冲突　Page265
@@ -425,16 +425,16 @@ constructor(private apiService: ApiService,
 	bootstrap: [] 　　　// 用于指定哪个Componet作为程序的入口（根）组件
 })
 ```
-##Data Architecture in Angualar 2
+## Data Architecture in Angualar 2
 1. Angular2并未强制规定要使用哪些数据架构，这由开发者自由选择。
 下面为一些常见的客户端方面的数据架构：
 > MVW / Two-way data binding: 双向数据绑定
  Flux: 单向数据绑定
 Observables: 观察者模式——Observables give us streams of data. We subscribe to (订阅) the streams and then perform operations to react to changes. (RxJs)
 
-###Data Architecture with Observables
+### Data Architecture with Observables
 
-####Part 1: Services
+#### Part 1: Services
 1. Reactive Programming: 反应性编程，即使用Observables来管理我们的数据架构。
 > Reactive Programmng is a way to work with asynchronous streams of data. Observables are the main data structure we use to implement Reactive Programming.
 
