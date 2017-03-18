@@ -56,7 +56,7 @@ A.prototype.max = 19880716; // a.max => 19880716
 ```
 6. 如果a的原型属于A的原型链，表达式 a instance of A 值为true
 7. 原型的继承机制是发生在内部且是隐式的，即无法直接看到继承的属性和方法，但却能调用的到。
-##对象
+## 对象
 1. 定义：在javascript中，一个对象就是任何无序键值对的集合，如果它不是一个主数据类型(undefined，null，boolean，number，or string)，那它就是一个对象。
 2. **localStorage**是HTML5中提供的一个以键值对形式保存信息的一个全局变量。
 ```javascript
@@ -65,6 +65,6 @@ localStorage.setItem('key', value);
 // 获取信息
 localStorage.getItem('key');
 ```
-#typescript学习随笔
+# typescript学习随笔
 1. (Array.)map函数：在map中执行完所有的元素后才继续后面的
 ![](/home/flyman/Pictures/map.png) 
