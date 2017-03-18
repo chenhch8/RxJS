@@ -36,6 +36,7 @@ as variables into the addArticle() function on the button! Example:
 </form>
 ```
 4. In javascript, by default, propagates the click event to all the parent components. Because the click event is propagated to parents, our browser is trying to follow the empty link, which tells the browser to reload.
+
 ##内嵌指令 
 1. ngIf
 ```html
@@ -71,6 +72,7 @@ as variables into the addArticle() function on the button! Example:
 	This is what {{ content }} rendered
 </span>
 ```
+
 ##Form in Anuglar 2
 1. FormControl 和 FormGroup。
 	* A FormControl reporsents a single input field - it is the smallest unit of an Angular form.
@@ -174,6 +176,7 @@ class abc {
 	...
 }
 ```
+
 ##HTTP
 1. 在js中，异步的实现方法有三个：
 	* Callbacks
@@ -193,6 +196,7 @@ let i = a && b; // a、b均不为空时，选b，即后者；有任意一个为�
 let j = a || b; // a、b均不为空时，选a，即前者；有任意一个为空时，选不为空的那个
 ```
 5. 
+
 ##RxJS
 1. 对事件进行监听：将事件转变成一个可观察流(observable stream)，例如：
 ```typescript
@@ -200,6 +204,7 @@ let j = a || b; // a、b均不为空时，选a，即前者；有任意一个为�
 Observable.fromEvent(this.el.nativeElement, 'keyup')
 ```
 2. subscribe()**依次**接受三个回调：onSuccess、onError、onCompletion，其中后两个可选
+
 ##Routing
 1. Routes、RouterModule：不同页面之间的跳转
 ```typescript
@@ -282,6 +287,7 @@ export class ArticleComponent {
 	}
 }
 ```
+
 ### Route Guards: 客户端的路由保护
 ```typescript
 // [1] *.guard.ts，实现引导类，继承CanActivate接口，实现函数canActivate的定义
@@ -302,12 +308,14 @@ providers: [
 // [3] 在路由中使用它——若canActivate执行结果为true，则将对应的ProtectedComponent模块正常渲染出来，否则不渲染
 { path: 'protected', component: ProtectedComponent, canActivate: [LoggedInGuard]}
 ```
+
 ### nested routes 嵌套路由
 1. 详情看router_learning/base中的products
 ```tpyescript
 import { routes_products } from './ts/components/products/products.router';
 { path: 'products', component: ProductsComponent, children: routes_products }  // 嵌套路由
 ```
+
 ##Dependency Injection 依赖注入（代码dependency_injectory/complex）
 1. 定义：当组件/服务A需要组件/服务B运行时，就说B是A的一个依赖
 2. 依赖注入由三个部分组成：
@@ -402,6 +410,7 @@ constructor(private apiService: ApiService,
 	useValue: isProduction ? 'http://www.baidu.com' : 'http://www.google.com' 
 }
 ```
+
 ##NgModule
 1. 一种在Angular框架中管理依赖的方式：**what tags are compiled** and **what dependencies should be injected**
 2. 目的：
@@ -424,6 +433,7 @@ constructor(private apiService: ApiService,
 Observables: 观察者模式——Observables give us streams of data. We subscribe to (订阅) the streams and then perform operations to react to changes. (RxJs)
 
 ###Data Architecture with Observables
+
 ####Part 1: Services
 1. Reactive Programming: 反应性编程，即使用Observables来管理我们的数据架构。
 > Reactive Programmng is a way to work with asynchronous streams of data. Observables are the main data structure we use to implement Reactive Programming.
