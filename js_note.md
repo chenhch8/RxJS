@@ -1,5 +1,5 @@
 [TOC]
-#javascript 学习随笔
+# javascript 学习随笔
 ## 原型与原型属性
 1. \__proto__：原型；prototype：原型属性
 2. a.\__proto__ == a.constructor.prototype;
